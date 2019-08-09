@@ -1,0 +1,14 @@
+C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_api_user.deps.json
+C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_api_user.runtimeconfig.json
+C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_api_user.runtimeconfig.dev.json
+C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_api_user.dll
+C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_api_user.pdb
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.csprojAssemblyReference.cache
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.csproj.CoreCompileInputs.cache
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.RazorAssemblyInfo.cache
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.RazorAssemblyInfo.cs
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.AssemblyInfoInputs.cache
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.AssemblyInfo.cs
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.RazorTargetAssemblyInfo.cache
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.dll
+C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.pdb

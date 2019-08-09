@@ -1,19 +1,18 @@
-FROM node:10
+# Get Base Image (Full .NET Core SDK)
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
+WORKDIR /app
 
-# Create app directory
-WORKDIR /usr/src/app
+# Copy csproj and restore
+COPY *.csproj ./
+RUN dotnet restore
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
-
-# Bundle app source
-COPY . .
-
-EXPOSE 8080
-CMD [ "node", "index.js" ]
+# Generate runtime image
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+WORKDIR /app
+EXPOSE 80
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "aural_api_user.dll"]
