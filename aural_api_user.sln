@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aural_api_user", "aural_api_user.csproj", "{4F11C2CE-454B-4DE2-8B1B-AA84F86EE240}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aural_model_lib", "..\aural_model_lib\aural_model_lib.csproj", "{60892FC4-A72D-4A73-903A-377910789D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aural_lib", "..\aural_lib\aural_lib.csproj", "{0495DEFB-EE94-4A12-87B4-B577C943885A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4F11C2CE-454B-4DE2-8B1B-AA84F86EE240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F11C2CE-454B-4DE2-8B1B-AA84F86EE240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F11C2CE-454B-4DE2-8B1B-AA84F86EE240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60892FC4-A72D-4A73-903A-377910789D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60892FC4-A72D-4A73-903A-377910789D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60892FC4-A72D-4A73-903A-377910789D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60892FC4-A72D-4A73-903A-377910789D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0495DEFB-EE94-4A12-87B4-B577C943885A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0495DEFB-EE94-4A12-87B4-B577C943885A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0495DEFB-EE94-4A12-87B4-B577C943885A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0495DEFB-EE94-4A12-87B4-B577C943885A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
