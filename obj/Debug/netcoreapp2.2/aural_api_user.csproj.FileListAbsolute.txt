@@ -17,3 +17,4 @@ C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_lib.dll
 C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_model_lib.pdb
 C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\aural_lib.pdb
 C:\data\aural\aural_api\aural_api_user\obj\Debug\netcoreapp2.2\aural_api_user.csproj.CopyComplete
+C:\data\aural\aural_api\aural_api_user\bin\Debug\netcoreapp2.2\FluentValidation.dll

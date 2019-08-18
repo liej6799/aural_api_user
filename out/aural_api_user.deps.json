@@ -1,12 +1,12 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "11a8dc950cc7b66672773d37abaef8e3568a1d7a"
+    "signature": "3e9130ea1e60c4861134a5e920761e12b2832e3c"
   },
   "compilationOptions": {
     "defines": [
       "TRACE",
-      "DEBUG",
+      "RELEASE",
       "NETCOREAPP",
       "NETCOREAPP2_2"
     ],
@@ -14,7 +14,7 @@
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
-    "optimize": false,
+    "optimize": true,
     "keyFile": "",
     "emitEntryPoint": true,
     "xmlDoc": false,
@@ -25,20 +25,63 @@
       "aural_api_user/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
-          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.OpenApi": "1.1.3",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.7.12",
           "Newtonsoft.Json": "12.0.2",
           "Swashbuckle.AspNetCore": "5.0.0-rc2",
-          "aural_lib": "1.0.0.0",
-          "aural_model_lib": "1.0.0.0"
+          "aural_model_lib": "1.0.0"
         },
         "runtime": {
           "aural_api_user.dll": {}
         },
         "compile": {
           "aural_api_user.dll": {}
+        }
+      },
+      "FluentValidation/8.4.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.AspNetCore/8.4.0": {
+        "dependencies": {
+          "FluentValidation": "8.4.0",
+          "FluentValidation.DependencyInjectionExtensions": "8.4.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.AspNetCore.dll": {}
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/8.4.0": {
+        "dependencies": {
+          "FluentValidation": "8.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
       "Microsoft.OpenApi/1.1.3": {
@@ -131,34 +174,24 @@
           "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
-      "aural_lib/1.0.0.0": {
+      "aural_lib/1.0.0": {
         "runtime": {
-          "aural_lib.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "aural_lib.dll": {}
         },
         "compile": {
           "aural_lib.dll": {}
         }
       },
-      "aural_model_lib/1.0.0.0": {
+      "aural_model_lib/1.0.0": {
+        "dependencies": {
+          "FluentValidation.AspNetCore": "8.4.0",
+          "aural_lib": "1.0.0"
+        },
         "runtime": {
-          "aural_model_lib.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "aural_model_lib.dll": {}
         },
         "compile": {
           "aural_model_lib.dll": {}
-        }
-      },
-      "FluentValidation/8.0.0.0": {
-        "runtime": {
-          "FluentValidation.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.0.0"
-          }
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -280,7 +313,6 @@
           "Microsoft.AspNetCore.NodeServices": "2.2.0",
           "Microsoft.AspNetCore.Owin": "2.2.0",
           "Microsoft.AspNetCore.Razor": "2.2.0",
-          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.AspNetCore.Razor.Language": "2.2.0",
           "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
           "Microsoft.AspNetCore.ResponseCaching": "2.2.0",
@@ -886,7 +918,6 @@
           "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.0",
           "Microsoft.AspNetCore.Mvc.TagHelpers": "2.2.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
-          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
           "Microsoft.Extensions.DependencyInjection": "2.2.0"
         },
@@ -1090,9 +1121,6 @@
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {}
         },
-        "compileOnly": true
-      },
-      "Microsoft.AspNetCore.Razor.Design/2.2.0": {
         "compileOnly": true
       },
       "Microsoft.AspNetCore.Razor.Language/2.2.0": {
@@ -3357,6 +3385,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "FluentValidation/8.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/VApywgD2sqD3aB1tzub6SIItmwxXN0D5yAiP3kuFHmjYO1W+Ryi531/m4O03/hlfcYrBgewDJn7Jd1Xk0vTdw==",
+      "path": "fluentvalidation/8.4.0",
+      "hashPath": "fluentvalidation.8.4.0.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/8.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yF6P6FLwk2nSYmNR7oPMAMi8rTtrqjcchY0hX9JwJkhAWBcZAxVyLdb64OFSUfSZ2dL7Dmuu8AI3/iCNvUOlUQ==",
+      "path": "fluentvalidation.aspnetcore/8.4.0",
+      "hashPath": "fluentvalidation.aspnetcore.8.4.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/8.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RZdsBuUJCXGhyjy/XY5E3Xk5VbbCEWc78Qp8Zez0YkTWfdlCuH1Ef2+rg0Ng2ayb7yhinLlSe1YxB9/7j9c7iQ==",
+      "path": "fluentvalidation.dependencyinjectionextensions/8.4.0",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.8.4.0.nupkg.sha512"
+    },
     "Microsoft.OpenApi/1.1.3": {
       "type": "package",
       "serviceable": true,
@@ -3406,18 +3455,13 @@
       "path": "swashbuckle.aspnetcore.swaggerui/5.0.0-rc2",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.5.0.0-rc2.nupkg.sha512"
     },
-    "aural_lib/1.0.0.0": {
-      "type": "reference",
+    "aural_lib/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "aural_model_lib/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "FluentValidation/8.0.0.0": {
-      "type": "reference",
+    "aural_model_lib/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
@@ -3903,13 +3947,6 @@
       "sha512": "sha512-V54PIyDCFl8COnTp9gezNHpUNHk7F9UnerGeZy3UfbnwYvfzbo+ipqQmSgeoESH8e0JvKhRTyQyZquW2EPtCmg==",
       "path": "microsoft.aspnetcore.razor/2.2.0",
       "hashPath": "microsoft.aspnetcore.razor.2.2.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Razor.Design/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-VLWK+ZtMMNukY6XjxYHc7mz33vkquoEzQJHm/LCF5REVxIaexLr+UTImljRRJBdUDJluDAQwU+59IX0rFDfURA==",
-      "path": "microsoft.aspnetcore.razor.design/2.2.0",
-      "hashPath": "microsoft.aspnetcore.razor.design.2.2.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/2.2.0": {
       "type": "package",

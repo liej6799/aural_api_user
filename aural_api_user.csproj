@@ -21,7 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\aural_model_lib\aural_model_lib.csproj" />
+    <Reference Include="aural_lib">
+      <HintPath>..\..\aural_lib\aural_lib\out\aural_lib.dll</HintPath>
+    </Reference>
+    <Reference Include="aural_model_lib">
+      <HintPath>..\..\aural_lib\aural_model_lib\bin\Debug\netcoreapp2.2\aural_model_lib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
