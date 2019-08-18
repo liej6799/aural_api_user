@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using aural_api_user.Models;
+using aural_lib.Common;
+using aural_lib.Models;
 using Microsoft.AspNetCore.Mvc;
 using static aural_model_lib.User.UserApiModel;
 namespace aural_api_user.Controllers
@@ -22,15 +24,14 @@ namespace aural_api_user.Controllers
             if (res == "")
             {
                 // No Error
-                return Content("No Error");
+                return Content("No Error"); 
             }
             else
             {
                 return new RegisterOutputModel
                 {
-                    StatusCode = 1,
-                    StatusMessage = "Invalid Format Provided",
-                    ErrorMessages = res
+                    ApiErrorCode = new ApiCode().InvalidParameters(),
+                    ErrorMessages = res,
                 };
             }
         }
