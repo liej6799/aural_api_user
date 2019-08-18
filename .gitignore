@@ -4,8 +4,6 @@
 
 ### DotnetCore ###
 # .NET Core build folders
-/bin
-/obj
 
 # Common node modules locations
 /node_modules
@@ -139,6 +137,7 @@ $tf/
 
 # Guidance Automation Toolkit
 *.gpState
+
 
 # ReSharper is a .NET coding add-in
 _ReSharper*/
